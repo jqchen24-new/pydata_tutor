@@ -20,7 +20,7 @@ export const generateProblem = async (topicName: string, difficulty: string): Pr
         properties: {
           id: { type: Type.STRING },
           title: { type: Type.STRING },
-          description: { type: Type.STRING, description: "Markdown supported description of the problem, including sample input data description. Use markdown code blocks for data examples." },
+          description: { type: Type.STRING, description: "Comprehensive Markdown description. Use Markdown tables for sample data. Use code blocks for input/output examples. Use bolding for emphasis." },
           difficulty: { type: Type.STRING, enum: ["Easy", "Medium", "Hard"] },
           startingCode: { type: Type.STRING, description: "Initial python code boilerplate only. Import necessary libraries and define variables or empty functions. DO NOT IMPLEMENT THE SOLUTION." },
           hints: { type: Type.ARRAY, items: { type: Type.STRING } }

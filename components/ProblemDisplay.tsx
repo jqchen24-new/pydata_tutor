@@ -48,7 +48,30 @@ export const ProblemDisplay: React.FC<ProblemDisplayProps> = ({ problem, onNextP
         </h2>
         
         <div 
-          className="prose prose-invert prose-sm max-w-none text-slate-300 bg-slate-800/30 p-5 rounded-xl border border-slate-700/50 [&>pre]:bg-slate-900 [&>pre]:border [&>pre]:border-slate-700"
+          className="
+            prose prose-invert prose-sm max-w-none 
+            text-slate-300 
+            bg-slate-800/30 p-6 rounded-xl border border-slate-700/50 
+            
+            /* Headings */
+            prose-headings:text-slate-100 prose-headings:font-bold prose-headings:mb-3 prose-headings:mt-6
+            prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg
+            
+            /* Code blocks */
+            prose-pre:bg-slate-950 prose-pre:border prose-pre:border-slate-800 prose-pre:text-slate-200 
+            prose-code:text-blue-300 prose-code:bg-slate-800/50 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+
+            /* Tables (crucial for data science problems) */
+            prose-table:w-full prose-table:text-sm prose-table:my-4 prose-table:border-collapse
+            prose-th:bg-slate-800 prose-th:p-3 prose-th:text-left prose-th:text-slate-200 prose-th:font-semibold prose-th:border prose-th:border-slate-700
+            prose-td:p-3 prose-td:text-slate-400 prose-td:border prose-td:border-slate-700
+            
+            /* Lists */
+            prose-li:marker:text-slate-600
+            
+            /* Strong/Bold */
+            prose-strong:text-slate-100 prose-strong:font-semibold
+          "
           dangerouslySetInnerHTML={renderMarkdown(problem.description)}
         />
       </div>
