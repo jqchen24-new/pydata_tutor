@@ -1,0 +1,5 @@
+{
+  "name": "PyData Tutor",
+  "description": "A smart, AI-powered interactive platform for Data Scientists to practice Python, Pandas, and NumPy skills with real-time AI feedback and code evaluation.",
+  "requestFramePermissions": []
+}
